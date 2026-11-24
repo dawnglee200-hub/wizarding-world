@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wizarding World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>THE WIZARDING WORLD</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#houses">Houses</a>
+        <a href="#sorting">Sorting Hat</a>
+        <a href="#spells">Spells</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Welcome to Hogwarts</h2>
+    <p>Your magical journey begins here.</p>
+    <a href="#sorting">Discover Your House</a>
+</section>
+
+
+<section id="houses">
+    <h2>The Four Houses of Hogwarts</h2>
+    <p>Choose your destiny.</p>
+
+    <div class="houses">
+        <div class="house gryffindor"
+             onclick="showHouse('Gryffindor')">
+            🦁
+            <h3>Gryffindor</h3>
+            <p>Bravery · Courage · Determination</p>
+        </div>
+
+        <div class="house slytherin"
+             onclick="showHouse('Slytherin')">
+            🐍
+            <h3>Slytherin</h3>
+            <p>Ambition · Cunning · Pride</p>
+        </div>
+
+        <div class="house ravenclaw"
+             onclick="showHouse('Ravenclaw')">
+            🦅
+            <h3>Ravenclaw</h3>
+            <p>Wisdom · Creativity · Intelligence</p>
+        </div>
+
+        <div class="house hufflepuff"
+             onclick="showHouse('Hufflepuff')">
+            🦡
+            <h3>Hufflepuff</h3>
+            <p>Loyalty · Patience · Fairness</p>
+        </div>
+    </div>
+
+    <div id="houseInfo"></div>
+</section>
+
+
+
+<section id="sorting">
+    <h2>The Sorting Ceremony</h2>
+    <p>Let the Sorting Hat discover your true identity.</p>
+
+    <div id="quizBox">
+        <p id="questionNumber">Question 1 / 15</p>
+        <h3 id="quizQuestion"></h3>
+        <div id="quizAnswers"></div>
+        <p id="quizProgress"></p>
+    </div>
+
+    <div id="quizResult" style="display:none;">
+        <h2 id="quizHouse"></h2>
+        <p id="quizDescription"></p>
+        <button onclick="restartQuiz()">Try Again</button>
+    </div>
+</section>
+
+
+<section id="spells">
+    <h2>Spell Library</h2>
+    <p>Lumos – Light</p>
+    <p>Accio – Summoning</p>
+    <p>Expelliarmus – Disarming</p>
+    <p>Expecto Patronum – Patronus Charm</p>
+</section>
+
+<section id="wand">
+    <h2>Ollivanders Wand Shop</h2>
+    <p>The wand chooses the wizard.</p>
+
+    <div class="magic-card">
+        <h3>Discover Your Wand</h3>
+
+        <button onclick="chooseWand()">
+            Find My Wand
+        </button>
+
+        <div id="wandResult"></div>
+    </div>
+</section>
+
+<section id="author">
+    <h2>THÔNG TIN TÁC GIẢ</h2>
+
+    <div class="author-card">
+        <div class="author-icon">⚡</div>
+
+        <h3>Lê Ngọc Hải Đăng</h3>
+
+        <p>Học sinh lớp 12.7</p>
+
+        <div class="author-line"></div>
+
+        <p class="author-message">
+            Cảm ơn bạn đã ghé thăm thế giới phù thủy của tôi!
+        </p>
+
+        <p class="author-signature">
+            Một thế giới phép thuật – Một hành trình khám phá.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 - Thế Giới Phù Thủy</p>
+    <p>Website được thực hiện bởi Lê Ngọc Hải Đăng - Lớp 12.7</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<section id="patronus">
+    <h2>Expecto Patronum</h2>
+    <p>Discover your magical guardian.</p>
+
+    <div class="magic-card">
+        <h3>Find Your Patronus</h3>
+        <button onclick="findPatronus()">
+            Reveal My Patronus
+        </button>
+        <div id="patronusResult"></div>
+    </div>
+</section>
+
+<section id="profile">
+    <h2>Your Wizard Profile</h2>
+
+    <div class="magic-card">
+        <input
+            id="wizardName"
+            type="text"
+            placeholder="Enter your wizard name"
+        >
+
+        <button onclick="saveProfile()">
+            Save My Profile
+        </button>
+
+        <div id="savedProfile"></div>
+    </div>
+</section>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#houses">Houses</a>
+    <a href="#sorting">Sorting Hat</a>
+    <a href="#wand">Wand</a>
+    <a href="#patronus">Patronus</a>
+    <a href="#spells">Spells</a>
+    <a href="#profile">Profile</a>
+</nav>

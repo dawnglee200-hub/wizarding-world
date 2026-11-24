@@ -1,0 +1,421 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #090d17;
+    color: #eee4ce;
+    font-family: 'Crimson Text', Georgia, serif;
+    text-align: center;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 22px 15px;
+    background: rgba(7, 10, 18, 0.96);
+    border-bottom: 1px solid #b99b58;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: #d7b56d;
+}
+
+h1 {
+    font-size: 27px;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 18px;
+}
+
+nav a {
+    color: #eee4ce;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d7b56d;
+}
+
+/* GENERAL SECTIONS */
+section {
+    padding: 85px 20px;
+    min-height: 250px;
+}
+
+section h2 {
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+
+/* HOGWARTS HERO */
+#home {
+    min-height: 570px;
+    padding: 150px 20px;
+    background:
+        linear-gradient(
+            rgba(5, 9, 20, 0.48),
+            rgba(5, 9, 20, 0.90)
+        ),
+        url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1800&q=85');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h2 {
+    font-size: clamp(35px, 6vw, 60px);
+    text-shadow: 0 0 25px #d7b56d55;
+}
+
+#home p {
+    font-size: 23px;
+    color: #e5d8bc;
+}
+
+#home a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 28px;
+    border: 1px solid #d7b56d;
+    color: #d7b56d;
+    font-family: 'Cinzel', serif;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#home a:hover {
+    background: #d7b56d;
+    color: #090d17;
+    box-shadow: 0 0 25px #d7b56d66;
+}
+
+/* HOGWARTS HOUSES */
+#houses {
+    background: linear-gradient(#101827, #090d17);
+}
+
+.houses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 850px;
+    margin: 35px auto;
+}
+
+.houses div {
+    padding: 45px 20px;
+    border: 1px solid #8e774c;
+    background: linear-gradient(145deg, #1a2436, #101522);
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    transition: 0.35s;
+}
+
+.houses div:hover {
+    transform: translateY(-8px);
+    border-color: #e5c77d;
+    box-shadow: 0 10px 35px #d7b56d22;
+}
+
+/* SORTING HAT */
+#sorting {
+    background: #111827;
+}
+
+#sorting button {
+    min-width: 130px;
+}
+
+/* SPELL LIBRARY */
+#spells {
+    background: linear-gradient(#090d17, #151d2c);
+}
+
+#spells p {
+    padding: 15px;
+    border-bottom: 1px solid #51452e;
+    max-width: 500px;
+    margin: auto;
+    font-size: 19px;
+}
+
+/* BUTTONS */
+button {
+    padding: 14px 22px;
+    margin: 8px;
+    background: #c9a85e;
+    color: #10101a;
+    border: 1px solid #e0c47d;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #f0d99f;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+footer {
+    padding: 30px;
+    background: #060911;
+    color: #b8ad98;
+    border-top: 1px solid #8e774c;
+}
+
+/* MOBILE */
+@media(max-width: 600px) {
+    h1 {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .houses {
+        grid-template-columns: 1fr;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    #home {
+        min-height: 480px;
+        padding: 90px 15px;
+    }
+}
+
+.house {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.house h3 {
+    margin-bottom: 8px;
+}
+
+.gryffindor {
+    border-color: #9e2929 !important;
+}
+
+.slytherin {
+    border-color: #277c52 !important;
+}
+
+.ravenclaw {
+    border-color: #426ba7 !important;
+}
+
+.hufflepuff {
+    border-color: #c49b32 !important;
+}
+
+#houseInfo {
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 30px;
+    background: #151d30;
+    border: 1px solid #b99b58;
+    line-height: 1.7;
+}
+
+#quizBox, #quizResult {
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 35px 20px;
+    background: #151d30;
+    border: 1px solid #b99b58;
+}
+
+#questionNumber {
+    color: #d7b56d;
+    font-family: 'Cinzel', serif;
+}
+
+#quizQuestion {
+    font-size: 23px;
+    margin: 25px 0;
+}
+
+#quizAnswers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+#quizAnswers button {
+    min-height: 65px;
+}
+
+#quizProgress {
+    color: #b8ad98;
+    margin-top: 25px;
+}
+
+@media(max-width: 550px) {
+    #quizAnswers {
+        grid-template-columns: 1fr;
+    }
+}
+
+.magic-card {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 40px 20px;
+    background: #151d30;
+    border: 1px solid #b99b58;
+}
+
+#wandResult {
+    margin-top: 25px;
+    color: #e6d4a9;
+    line-height: 1.8;
+}
+
+#patronus {
+    background: linear-gradient(#101827, #090d17);
+}
+
+#patronus .magic-card {
+    border-color: #9ab8d9;
+}
+
+#patronus h2 {
+    color: #b6d3ed;
+}
+
+#patronus button {
+    background: #b6d3ed;
+    border-color: #d8e9f8;
+}
+
+#wizardName {
+    width: 90%;
+    max-width: 400px;
+    padding: 15px;
+    margin: 15px;
+    background: #090d17;
+    border: 1px solid #b99b58;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 17px;
+}
+
+#savedProfile {
+    margin-top: 25px;
+}
+
+/* MAGICAL ANIMATIONS */
+
+@keyframes magicalGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px #d7b56d44;
+    }
+
+    50% {
+        text-shadow: 0 0 22px #d7b56d;
+    }
+}
+
+#home h2 {
+    animation: magicalGlow 3s infinite;
+}
+
+.magic-card {
+    transition: 0.3s;
+    box-shadow: 0 10px 35px #0005;
+}
+
+.magic-card:hover {
+    transform: translateY(-5px);
+    border-color: #e5c77d;
+    box-shadow: 0 10px 40px #d7b56d22;
+}
+
+#houseInfo h2,
+#quizHouse {
+    animation: magicalGlow 2.5s infinite;
+}
+
+/* AUTHOR SECTION */
+#author {
+    background: linear-gradient(#111827, #080c15);
+    padding: 80px 20px;
+}
+
+#author h2 {
+    color: #d7b56d;
+    letter-spacing: 3px;
+}
+
+.author-card {
+    max-width: 600px;
+    margin: 35px auto;
+    padding: 40px 25px;
+    background: linear-gradient(145deg, #1a2436, #0c1220);
+    border: 1px solid #b99b58;
+    box-shadow: 0 0 30px #d7b56d22;
+}
+
+.author-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.author-card h3 {
+    font-size: 27px;
+    color: #e5c77d;
+}
+
+.author-card p {
+    font-size: 18px;
+    color: #eee4ce;
+}
+
+.author-line {
+    width: 100px;
+    height: 2px;
+    background: #b99b58;
+    margin: 25px auto;
+}
+
+.author-signature {
+    font-style: italic;
+    color: #d7b56d !important;
+    font-size: 16px !important;
+}
+
+footer {
+    line-height: 1.8;
+}
